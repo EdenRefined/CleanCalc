@@ -20,6 +20,16 @@ function operateIntermediary(operation, arg1, arg2) {
 	return operation(arg1, arg2);
 };
 
+function operate(operation, arg1, arg2) {
+	if (arg2) {
+		lastResult = operation(arg1, arg2);
+		return lastResult;
+	} else {
+		lastResult = operation(arg1, lastResult);
+		return lastResult;
+	}
+};
+
 
 lastResult = add(2, 4);
 lastResult = add(5, lastResult);

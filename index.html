@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <style>
+    #calc {width:300px; height: 300px;}
+    #btn {width: 100%; height: 50px;}
+    </style>
+    <table id="calc" border=2>
+        <tr>
+            <td colspan=4><input id="btn" name="display" 
+                onkeypress="return event.lastResult" type="text"></td>
+            <td style="display: none"><input type="number"></td>
+        </tr>
+        <tr>
+            <td><input id="btn9" type=number value="9" OnClick="calc.display.value+='9'"></td>
+            <td><input id="btn8" type=number value="8" OnClick="calc.display.value+='8'"></td>
+            <td><input id="btn7" type=number value="7" OnClick="calc.display.value+='7'"></td>
+            <td><input id="btn+" type=button value="+" OnClick="handlers.operate()"></td>
+        </tr>
+        <tr>
+            <td><input id="btn6" type=number value="6" OnClick="calc.display.value+='6'"></td>
+            <td><input id="btn5" type=number value="5" OnClick="calc.display.value+='5'"></td>
+            <td><input id="btn4" type=number value="4" OnClick="calc.display.value+='4'"></td>
+            <td><input id="btn-" type=button value="-" OnClick="handlers.operate()"></td>
+        </tr>
+        <tr>
+            <td><input id="btn3" type=number value="3" OnClick="calc.display.value+='3'"></td>
+            <td><input id="btn2" type=number value="2" OnClick="calc.display.value+='2'"></td>
+            <td><input id="btn1" type=number value="1" OnClick="calc.display.value+='1'"></td>
+            <td><input id="btn*" type=button value="*" OnClick="handlers.operate()"></td>
+        </tr>
+        <tr>
+            <td><input id="btnC" type=button value="C" OnClick="calc.display.value+=''"></td>
+            <td><input id="btn0" type=number value="0" OnClick="calc.display.value+='0'"></td>
+            <td><input id="btn=" type=button value="=" OnClick="calc.display.value=operate(lastResult)"></td>
+            <td><input id="btn/" type=button value="/" OnClick="handlers.operate()"></td>
+        </tr>
+        
+    </table>
+  </body>
+</html>
